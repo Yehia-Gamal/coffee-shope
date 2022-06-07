@@ -118,14 +118,72 @@ header .nav {
 }
 header .nav li a {
   color: #fff;
-  margin-right: 15px;
   font-size: 18px;
   transition: var(--transition);
 }
-header .nav li a:hover {
-  color: var(--main-color);
-  border-bottom: 1px solid var(--main-color);
+header .nav li {
+  padding: 5px 10px;
+  border-bottom: 7px solid transparent;
+  transition: var(--transition);
+}
+header .nav li:hover {
+  background-color: rgb(204 204 204 / 30%);
+  border-bottom: 2px solid var(--main-color);
   padding-bottom: 7px;
+}
+header .nav li:hover a {
+  color: var(--main-color);
+}
+#burger {
+  display: none;
+  margin-left: 25px;
+  transform-origin: 0 0;
+  cursor: pointer;
+}
+#burger span {
+  display: block;
+  background-color: var(--main-color);
+  width: 33px;
+  height: 3px;
+  margin-bottom: 5px;
+  border-radius: 6px;
+}
+
+#burger.is-active span:nth-child(1) {
+  transform: translate(1px, 10px) rotate(45deg);
+}
+#burger.is-active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(15px);
+}
+#burger.is-active span:nth-child(3) {
+  transform: translate(0px, -5px) rotate(-45deg);
+}
+#burger.is-active span {
+  background-color: #ff274b;
+}
+
+header .container .active {
+  display: block;
+  position: fixed;
+  top: 100px;
+  right: 10px;
+  background-color: #000;
+  width: 200px;
+  height: 60vh;
+  padding: 20px;
+  text-align: center;
+}
+ul.active li {
+  padding: 5px 0;
+}
+ul.active li a {
+  font-size: 25px;
+  color: #ccc;
+}
+ul.active li:hover {
+  background-color: rgb(204 204 204 / 30%);
+  color: var(--main-color);
 }
 header .icons {
   color: #fff;
@@ -527,3 +585,20 @@ footer h2 a span {
   font-size: 30px;
 }
 /* End Footer */
+
+
+/* Start Media Queries */
+
+@media (max-width: 767px) {
+  header .nav {
+    display: none;
+  }
+  #burger {
+    display: block;
+  }
+  header .active {
+    display: none;
+  }
+}
+
+/* End Media Queries */
