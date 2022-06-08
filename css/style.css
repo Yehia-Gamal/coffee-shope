@@ -443,6 +443,7 @@ header .icons li:hover {
   justify-content: space-between;
   align-items: center;
   flex-direction: row-reverse;
+  width: 100%;
 }
 .contact .content form {
   background-color: var(--bg2);
@@ -591,6 +592,15 @@ footer h2 a span {
 /* Start Media Queries */
 
 @media (max-width: 767px) {
+  .title {
+    font-size: 33px;
+  }
+  header .logo img {
+    width: 60px;
+  }
+  header .icons {
+    font-size: 20px;
+  }
   header .nav {
     display: none;
   }
@@ -622,6 +632,59 @@ footer h2 a span {
   }
   #form.active input {
     width: 200px;
+  }
+  .home .content h2 {
+    font-size: 35px;
+  }
+  .products .content,
+  .review .content,
+  .blogs .content {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  }
+  .about .content {
+    flex-direction: column;
+  }
+  .contact .content form {
+    padding: 20px 10px;
+    width: 100%;
+  }
+  .contact .content form .inputBox input {
+    padding: 15px;
+    font-size: 15px;
+  }
+  .contact .content form .inputBox i {
+    font-size: 18px;
+  }
+  .contact .content iframe {
+    width: 100%;
+  }
+  .about .content .img,
+  .about .content .text {
+    width: 95%;
+  }
+  .contact .content {
+    flex-direction: column-reverse;
+  }
+  footer .icons ul li {
+    padding: 9px 13px;
+    margin: 12px 5px;
+  }
+  footer .icons ul li a i {
+    font-size: 25px;
+  }
+  footer .icons-conect div {
+    padding: 8px;
+    font-size: 17px;
+  }
+  footer .icons-conect div .info {
+    font-size: 13px;
+    letter-spacing: 0;
+  }
+  footer h2 a {
+    font-size: 13px;
+  }
+  footer h2 a span {
+    font-size: 17px;
   }
 }
 
