@@ -638,7 +638,8 @@ footer h2 a span {
   }
   .products .content,
   .review .content,
-  .blogs .content {
+  .blogs .content,
+  .menu .content {
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   }
   .about .content {
