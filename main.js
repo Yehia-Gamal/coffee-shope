@@ -19,15 +19,14 @@ let nav = document.querySelector(".nav");
 
 burger.onclick = () => {
   nav.classList.toggle("active");
-  burger.classList.toggle("is-active")
+  burger.classList.toggle("is-active");
 };
 
 window.onscroll = () => {
   active.classList.remove("active");
   activeSearch.classList.remove("active");
-  burger.classList.remove("is-active")
+  burger.classList.remove("is-active");
   nav.classList.remove("active");
-
 };
 
 let body = document.querySelector("section");
