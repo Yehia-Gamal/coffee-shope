@@ -163,7 +163,7 @@ header .nav li:hover a {
   background-color: #ff274b;
 }
 
-header .container .active {
+header .container ul.active {
   display: block;
   position: fixed;
   top: 100px;
@@ -200,17 +200,20 @@ header .icons li:hover {
 }
 #form {
   display: none;
-  position: relative;
 }
 #form.active {
+  position: relative;
   display: block;
   background-color: #fff;
-}
-.active input {
   position: fixed;
   top: 100px;
-  right: 125px;
+  right: 80px;
   width: 350px;
+  border-radius: 20px;
+  height: 41px;
+}
+#form.active input {
+  width: 300px;
   font-size: 18px;
   padding: 10px;
   border-radius: 6px;
@@ -219,11 +222,10 @@ header .icons li:hover {
 }
 #form label {
   position: absolute;
-  top: 80px;
-  right: 20px;
+  top: 10px;
+  right: 10px;
   font-size: 20px;
   color: #000;
-  z-index: 1;
   cursor: pointer;
 }
 #menu {
@@ -597,6 +599,29 @@ footer h2 a span {
   }
   header .active {
     display: none;
+  }
+  #menu.active {
+    width: 80%;
+    height: calc(90vh - 90px);
+  }
+  .active .box {
+    gap: 10px;
+  }
+  .active .box img {
+    width: 60px;
+  }
+  .active .box h3 {
+    font-size: 17px;
+  }
+  .active .box i {
+    right: 0px;
+  }
+  #form.active {
+    right: 25px;
+    width: 250px;
+  }
+  #form.active input {
+    width: 200px;
   }
 }
 
